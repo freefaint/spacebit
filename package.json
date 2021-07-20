@@ -38,6 +38,7 @@
   "files": [
     "lib",
     "index.js",
+    "index.d.ts",
     "README.md"
   ],
   "repository": {
