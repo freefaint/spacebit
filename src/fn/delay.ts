@@ -29,5 +29,3 @@ export const cancel = (fn: () => void) => {
     clearTimeout(timers[i]);
   }
 };
-
-const noop = () => null;
