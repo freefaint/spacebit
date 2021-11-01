@@ -30,7 +30,7 @@ export enum FieldType {
 
 interface AbstractFieldProps<T> {
   label: string;
-  size?: TextFieldProps['size']
+  size?: TextFieldProps['size'];
   value?: T;
   error?: string;
   type?: FieldType;

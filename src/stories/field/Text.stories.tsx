@@ -22,7 +22,7 @@ export const Default = Template.bind({});
 Default.args = {
   type: FieldType.Number,
   label: 'Стандартное текстовое поле',
-  value: 'Example'
+  value: 'Example',
 };
 
 export const Small = Template.bind({});
@@ -30,7 +30,7 @@ Small.args = {
   type: FieldType.Number,
   label: 'Маленькое текстовое поле',
   size: 'small',
-  value: 'Example'
+  value: 'Example',
 };
 
 export const Readonly = Template.bind({});
@@ -38,7 +38,7 @@ Readonly.args = {
   type: FieldType.Number,
   label: 'Текстовое поле только для чтения',
   readOnly: true,
-  value: 'Example'
+  value: 'Example',
 };
 
 export const Disabled = Template.bind({});
@@ -46,5 +46,5 @@ Disabled.args = {
   type: FieldType.Number,
   label: 'Выключенное текстовое поле',
   disabled: true,
-  value: 'Example'
+  value: 'Example',
 };

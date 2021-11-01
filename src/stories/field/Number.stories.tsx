@@ -26,5 +26,5 @@ Default.args = {
 export const Small = Template.bind({});
 Small.args = {
   label: 'Маленькое числовое поле',
-  size: 'small'
+  size: 'small',
 };

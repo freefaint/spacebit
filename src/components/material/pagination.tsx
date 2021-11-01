@@ -1,7 +1,7 @@
 import MuiPagination from '@material-ui/lab/Pagination';
 import { withStyles } from '@material-ui/styles';
 
-export const Pagination = withStyles(theme => ({
+export const Pagination = withStyles((theme) => ({
   ul: {
     '& .MuiPaginationItem-root.Mui-selected': {
       color: theme.palette.primary.main,
