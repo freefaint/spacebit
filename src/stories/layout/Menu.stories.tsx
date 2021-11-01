@@ -21,25 +21,25 @@ export const Default = Template.bind({});
 Default.args = {
   menu: [
     {
-      title: "Пользователи",
+      title: 'Пользователи',
       icon: <PlayCircleFilled />,
       route: PageRoute.Users,
       type: PageType.Registry,
-      roles: [UserRole.Admin]
+      roles: [UserRole.Admin],
     },
     {
-      title: "Сканирование",
+      title: 'Сканирование',
       icon: <PlayCircleFilled />,
       route: PageRoute.Scans,
       type: PageType.Registry,
-      roles: [UserRole.Admin]
+      roles: [UserRole.Admin],
     },
     {
-      title: "Организации",
+      title: 'Организации',
       icon: <PlayCircleFilled />,
       route: PageRoute.Organizations,
       type: PageType.Registry,
-      roles: [UserRole.Admin]
+      roles: [UserRole.Admin],
     },
     {
       route: PageRoute.Profile,
@@ -48,44 +48,44 @@ Default.args = {
       roles: [UserRole.Admin, UserRole.Client],
     },
     {
-      title: "Отчеты",
+      title: 'Отчеты',
       icon: <PlayCircleFilled />,
       type: PageType.Parent,
       roles: [UserRole.Admin, UserRole.Client],
-  
+
       pages: [
         {
-          title: "Динамика результатов сканирований",
+          title: 'Динамика результатов сканирований',
           route: PageRoute.Dynamic,
           type: PageType.Custom,
           component: () => <></>,
-          roles: [UserRole.Admin, UserRole.Client]
+          roles: [UserRole.Admin, UserRole.Client],
         },
         {
-          title: "Текущее состояние сети",
+          title: 'Текущее состояние сети',
           route: PageRoute.Network,
           type: PageType.Custom,
           component: () => <></>,
           default: true,
-          roles: [UserRole.Admin, UserRole.Client]
+          roles: [UserRole.Admin, UserRole.Client],
         },
         {
-          title: "Сравнение по времени",
+          title: 'Сравнение по времени',
           route: PageRoute.Compare,
           type: PageType.Custom,
           component: () => <></>,
-          roles: [UserRole.Admin, UserRole.Client]
+          roles: [UserRole.Admin, UserRole.Client],
         },
         {
-          title: "Отчет по хостам",
+          title: 'Отчет по хостам',
           route: PageRoute.HostsReport,
           type: PageType.Custom,
           component: () => <></>,
-          roles: [UserRole.Admin, UserRole.Client]
-        }
-      ]
+          roles: [UserRole.Admin, UserRole.Client],
+        },
+      ],
     },
   ],
   page: PageRoute.Organizations,
-  user: { id: 1, role: 'Admin', name: 'login' }
+  user: { id: 1, role: 'Admin', name: 'login' },
 };

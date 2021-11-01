@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof Button> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: "contained",
-  color: "primary",
+  variant: 'contained',
+  color: 'primary',
   children: 'Кнопка',
 };

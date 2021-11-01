@@ -1,6 +1,6 @@
-import { UserRole } from "../types";
+import { UserRole } from '../types';
 
 export const roles: Record<UserRole, string> = {
-  [UserRole.Admin]: "Администратор",
-  [UserRole.Client]: "Клиент",
-}
+  [UserRole.Admin]: 'Администратор',
+  [UserRole.Client]: 'Клиент',
+};

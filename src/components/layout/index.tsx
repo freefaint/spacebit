@@ -20,32 +20,32 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
     },
     drawer: {
-      width: "18rem",
-      paddingTop: "4.5rem"
+      width: '18rem',
+      paddingTop: '4.5rem',
     },
     appBar: {
       position: 'relative',
       zIndex: 1400,
-      background: "#fff",
+      background: '#fff',
     },
     menuItem: {
-      padding: "1.25rem",
-      borderLeft: "0.25rem solid transparent"
+      padding: '1.25rem',
+      borderLeft: '0.25rem solid transparent',
     },
     activeMenuItem: {
-      padding: "1.25rem",
-      background: "rgba(1,147,147,0.05)",
+      padding: '1.25rem',
+      background: 'rgba(1,147,147,0.05)',
       color: theme.palette.primary.main,
-      borderLeft: "0.25rem solid " + theme.palette.primary.main,
+      borderLeft: '0.25rem solid ' + theme.palette.primary.main,
     },
     menuItemIcon: {
-      minWidth: "1.5rem !important",
-      marginRight: "1.5rem"
+      minWidth: '1.5rem !important',
+      marginRight: '1.5rem',
     },
     menuItemIconRight: {
-      minWidth: "1.5rem !important",
-      marginRight: "0"
-    }
+      minWidth: '1.5rem !important',
+      marginRight: '0',
+    },
   }),
 );
 
@@ -53,7 +53,7 @@ interface LayoutProps {
   page?: string;
   menu: Sitemap;
   user: User;
-  Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+  Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   onNavigate: (url: string) => void;
   onLogout: () => void;
 }
@@ -67,28 +67,41 @@ export const Layout = ({ page, user, menu, Logo, children, onNavigate, onLogout 
     onNavigate('/profile');
   }, [onNavigate]);
 
-  const handleNavigate = useCallback((url: string) => {
-    onNavigate(url);
-    setOpen(false);
-  }, [onNavigate, setOpen]);
+  const handleNavigate = useCallback(
+    (url: string) => {
+      onNavigate(url);
+      setOpen(false);
+    },
+    [onNavigate, setOpen],
+  );
 
   return (
     <>
       <header>
         <AppBar position="static" classes={{ root: classes.appBar }} color="transparent">
           <Toolbar>
-            <IconButton onClick={() => setOpen(true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <IconButton
+              onClick={() => setOpen(true)}
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
               <MenuIcon />
             </IconButton>
 
-            <div style={{ display: "flex", flexGrow: 1 }}>
+            <div style={{ display: 'flex', flexGrow: 1 }}>
               <Logo />
             </div>
-            
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <div style={{ margin: "0 1rem"}} >
-                <Typography variant="body1" style={{ fontWeight: "bold" }}>{user.name}</Typography>
-                <Typography variant="body1" style={{ fontSize: "0.75rem" }}>{roles[user.role]}</Typography>
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ margin: '0 1rem' }}>
+                <Typography variant="body1" style={{ fontWeight: 'bold' }}>
+                  {user.name}
+                </Typography>
+                <Typography variant="body1" style={{ fontSize: '0.75rem' }}>
+                  {roles[user.role]}
+                </Typography>
               </div>
 
               <Tooltip title="Профиль пользователя">
@@ -107,7 +120,7 @@ export const Layout = ({ page, user, menu, Logo, children, onNavigate, onLogout 
         </AppBar>
       </header>
 
-      <div style={{ position: "relative" }}>
+      <div style={{ position: 'relative' }}>
         <Drawer anchor="left" BackdropProps={{ style: { opacity: 0 } }} open={open} onClose={() => setOpen(false)}>
           <div className={classes.drawer}>
             <Menu menu={menu} page={page} user={user} onClose={() => setOpen(false)} onNavigate={handleNavigate} />
@@ -118,4 +131,4 @@ export const Layout = ({ page, user, menu, Logo, children, onNavigate, onLogout 
       </div>
     </>
   );
-}
+};

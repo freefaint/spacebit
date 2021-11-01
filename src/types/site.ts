@@ -5,7 +5,7 @@ import { UserRole } from './';
 export enum PageType {
   Registry,
   Custom,
-  Parent
+  Parent,
 }
 
 export enum EntityType {
@@ -15,14 +15,14 @@ export enum EntityType {
 }
 
 export enum PageRoute {
-  Users = "users",
-  Profile = "profile",
-  Dynamic = "dynamic",
-  Network = "network",
-  Compare = "compare",
-  HostsReport = "hosts_report",
-  Scans = "scans",
-  Organizations = "organizations"
+  Users = 'users',
+  Profile = 'profile',
+  Dynamic = 'dynamic',
+  Network = 'network',
+  Compare = 'compare',
+  HostsReport = 'hosts_report',
+  Scans = 'scans',
+  Organizations = 'organizations',
 }
 
 export interface AbstractPageSchema {
