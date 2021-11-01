@@ -1,12 +1,12 @@
 {
   "name": "spacebit",
   "baseURL": "./lib",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "main": "./index.js",
   "types": "./index.d.ts",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc",
+    "compile": "tsc --p tsconfig.json",
     "start": "npm run storybook",
     "clean": "rimraf lib",
     "build": "npm run pretty && npm run clean && npm run compile",
@@ -44,7 +44,8 @@
     "lib",
     "index.js",
     "index.d.ts",
-    "README.md"
+    "README.md",
+    "jsconfig.json"
   ],
   "repository": {
     "type": "git",
