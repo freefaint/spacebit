@@ -11,7 +11,7 @@ export default {
 const Template: ComponentStory<typeof Process> = (args) => <Process {...args} />;
 
 function factory<T>(fn: () => T, count?: number) {
-  return new Array(Math.ceil(count ?? (Math.random() * 2))).fill(true).map(fn);
+  return new Array(Math.ceil(count ?? Math.random() * 2)).fill(true).map(fn);
 }
 
 export const Default = Template.bind({});
@@ -61,18 +61,18 @@ Default.args = {
               progress: 86,
             },
 
-            paths: factory(() => ({ 
+            paths: factory(() => ({
               item: {
                 id: 3237,
                 entityType: EntityType.IMPLEMENTATION,
                 label: 'task 4',
                 status: EntityStatus.Work,
                 progress: 92,
-              }
+              },
             })),
-          }))
+          })),
         })),
-      }))
+      })),
     })),
   },
 };

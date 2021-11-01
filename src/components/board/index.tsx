@@ -92,7 +92,25 @@ export const Board = ({ title, operations, children }: React.PropsWithChildren<B
           opacity: 0.5,
           bottom: 0,
           fontFamily: 'monospace',
-          fontSize: '0.625rem',
+          fontSize: '1rem',
+        }}
+      >
+        {Math.ceil(scale * 100)} %
+      </div>
+
+      <div
+        style={{
+          position: 'fixed',
+          boxSizing: 'border-box',
+          width: '16rem',
+          display: 'flex',
+          zIndex: 1,
+          backgroundColor: 'rgba(0,0,0,0.25)',
+          color: '#fff',
+          opacity: 0.5,
+          bottom: 0,
+          fontFamily: 'monospace',
+          fontSize: '1rem',
         }}
       >
         {Math.ceil(scale * 100)} %

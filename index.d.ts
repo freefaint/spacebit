@@ -1,1 +1,1 @@
-declare module 'avrora';
+declare module 'barin';

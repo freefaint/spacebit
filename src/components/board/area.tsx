@@ -6,9 +6,18 @@ interface AreaProps {
   offsetY: number;
   onInit: (scale: number) => void;
   onMove?: (x: number, y: number) => void;
+  onScale?: (plus?: boolean) => void;
 }
 
-export const Area = ({ children, scale, offsetX, offsetY, onInit, onMove }: React.PropsWithChildren<AreaProps>) => {
+export const Area = ({
+  children,
+  scale,
+  offsetX,
+  offsetY,
+  onScale,
+  onInit,
+  onMove,
+}: React.PropsWithChildren<AreaProps>) => {
   const [moving, setMoving] = useState(false);
 
   const screenRef = useRef<HTMLDivElement | null>(null);
@@ -30,6 +39,10 @@ export const Area = ({ children, scale, offsetX, offsetY, onInit, onMove }: Reac
     document.addEventListener('mousemove', handleMouseMove);
   };
 
+  const handleWheel = (e: WheelEvent) => {
+    console.log('wheel', e);
+  };
+
   useEffect(() => {
     if (screenRef.current && contentRef.current) {
       onInit(
@@ -44,6 +57,7 @@ export const Area = ({ children, scale, offsetX, offsetY, onInit, onMove }: Reac
   useEffect(() => {
     screenRef.current?.removeEventListener('mousedown', handleMouseDown);
     screenRef.current?.addEventListener('mousedown', handleMouseDown);
+    screenRef.current?.addEventListener('wheel', handleWheel);
 
     return () => {
       screenRef.current?.removeEventListener('mousedown', handleMouseDown);

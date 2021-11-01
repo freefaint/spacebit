@@ -1,6 +1,6 @@
 {
-  "name": "avrora",
-  "version": "0.0.12",
+  "name": "brain",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
@@ -43,6 +43,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freefaint/avrora.git"
+    "url": "git+https://github.com/freefaint/neuro.git"
   }
 }
