@@ -3,23 +3,23 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Field, FieldType } from 'components/form/field';
 import { SpaceBitTheme } from 'components/theme';
+import { FormControl } from '@material-ui/core';
 
 export default {
-  title: 'Example/ProcessCard',
+  title: 'Field/Time',
   component: Field,
 } as ComponentMeta<typeof Field>;
 
 const Template: ComponentStory<typeof Field> = (args) => (
-  <SpaceBitTheme color='#019393'>
-    <Field {...args} />
+  <SpaceBitTheme color="#019393">
+    <FormControl fullWidth>
+      <Field {...args} />
+    </FormControl>
   </SpaceBitTheme>
 );
 
-function factory<T>(fn: () => T, count?: number) {
-  return new Array(Math.ceil(count ?? Math.random() * 2)).fill(true).map(fn);
-}
-
 export const Default = Template.bind({});
 Default.args = {
-  type: FieldType.DateTime,
+  type: FieldType.Time,
+  label: 'Стандартное время',
 };

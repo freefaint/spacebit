@@ -18,6 +18,7 @@ import { MonthNames } from 'constants/scan/enums';
 import { useSource } from 'hooks/useSource';
 
 import { TextField } from 'components/domain';
+import { TextFieldProps } from '@material-ui/core';
 
 export enum FieldType {
   Select = 'Select',
@@ -29,6 +30,7 @@ export enum FieldType {
 
 interface AbstractFieldProps<T> {
   label: string;
+  size?: TextFieldProps['size']
   value?: T;
   error?: string;
   type?: FieldType;
@@ -99,9 +101,10 @@ function Select<T extends { id: string | number; name: string }>({
   ) : null;
 }
 
-function Text({ label, error, value, disabled, readOnly, required, onChange }: Omit<FieldProps<string>, 'type'>) {
+function Text({ label, size, error, value, disabled, readOnly, required, onChange }: Omit<FieldProps<string>, 'type'>) {
   return (
     <TextField
+      size={size}
       label={label}
       value={value}
       required={required}
