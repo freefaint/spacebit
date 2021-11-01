@@ -1,8 +1,7 @@
 {
   "name": "spacebit",
-  "version": "1.1.15",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "version": "1.1.16",
+  "main": "./lib/index.js",
   "license": "MIT",
   "scripts": {
     "compile": "tsc --p tsconfig.json",
@@ -41,7 +40,6 @@
   },
   "files": [
     "lib",
-    "index.js",
     "README.md"
   ],
   "repository": {
