@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import { TextFieldProps } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import ruLocale from 'date-fns/locale/ru';
 import format from 'date-fns/format';
@@ -13,12 +14,11 @@ import {
 
 import { Autocomplete } from '../domain';
 
-import { MonthNames } from '../../constants/scan/enums';
+import { MonthNames } from '../../constants';
 
-import { useSource } from '../../hooks/useSource';
+import { useSource } from '../../hooks';
 
 import { TextField } from '../domain';
-import { TextFieldProps } from '@material-ui/core';
 
 export enum FieldType {
   Select = 'Select',

@@ -1,9 +1,9 @@
 import React from 'react';
+import { FormControl } from '@material-ui/core';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Field, FieldType } from 'components/form/field';
-import { SpaceBitTheme } from 'components/theme';
-import { FormControl } from '@material-ui/core';
+import { Field, FieldType } from '../../components/form/field';
+import { SpaceBitTheme } from '../../components/theme';
 
 export default {
   title: 'Field/Select',

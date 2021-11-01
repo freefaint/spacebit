@@ -1,9 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { FormControl } from '@material-ui/core';
 
-import { SpaceBitTheme } from 'components/theme';
-import { Pagination } from 'components/material';
+import { SpaceBitTheme } from '../components/theme';
+import { Pagination } from '../components/material';
 
 export default {
   title: 'Interface/Pagination',
