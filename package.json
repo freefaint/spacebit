@@ -1,11 +1,11 @@
 {
   "name": "spacebit",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "main": "./index.js",
   "types": "./index.d.ts",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s src -o lib",
+    "compile": "tsc --p tsconfig.json",
     "start": "npm run storybook",
     "clean": "rimraf lib",
     "build": "npm run pretty && npm run clean && npm run compile",
@@ -37,14 +37,11 @@
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "sb": "^6.3.8",
-    "tsconfig-replace-paths": "^0.0.10",
-    "tscpaths": "^0.0.9",
     "typescript": "^4.3.5"
   },
   "files": [
     "lib",
     "index.js",
-    "index.d.ts",
     "README.md"
   ],
   "repository": {
