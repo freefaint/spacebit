@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof Pagination>;
 
 const Template: ComponentStory<typeof Pagination> = (args) => (
-  <SpaceBitTheme color="#019393">
+  <SpaceBitTheme color="#f00">
     <Pagination {...args} />
   </SpaceBitTheme>
 );

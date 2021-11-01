@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof Field>;
 
 const Template: ComponentStory<typeof Field> = (args) => (
-  <SpaceBitTheme color="#019393">
+  <SpaceBitTheme color="#f00">
     <FormControl fullWidth>
       <Field {...args} />
     </FormControl>

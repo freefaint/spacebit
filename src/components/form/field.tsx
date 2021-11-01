@@ -11,13 +11,13 @@ import {
   KeyboardTimePicker,
 } from '@material-ui/pickers';
 
-import { Autocomplete } from 'components/domain';
+import { Autocomplete } from '../domain';
 
-import { MonthNames } from 'constants/scan/enums';
+import { MonthNames } from '../../constants/scan/enums';
 
-import { useSource } from 'hooks/useSource';
+import { useSource } from '../../hooks/useSource';
 
-import { TextField } from 'components/domain';
+import { TextField } from '../domain';
 import { TextFieldProps } from '@material-ui/core';
 
 export enum FieldType {

@@ -3,7 +3,7 @@ import React from 'react';
 import { makeStyles, TextFieldProps } from '@material-ui/core';
 import MuiAutocomplete, { AutocompleteProps } from '@material-ui/lab/Autocomplete';
 
-import { TextField } from 'components/material';
+import { TextField } from '../material';
 
 const useStyles = makeStyles({
   option: {
