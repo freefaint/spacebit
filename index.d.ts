@@ -1,1 +1,1 @@
-declare module 'barin';
+declare module 'spacebit';

@@ -1,14 +1,19 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { EntityStatus, EntityType, Process } from '../components/graph';
+import { Field, FieldType } from 'components/form/field';
+import { SpaceBitTheme } from 'components/theme';
 
 export default {
   title: 'Example/ProcessCard',
-  component: Process,
-} as ComponentMeta<typeof Process>;
+  component: Field,
+} as ComponentMeta<typeof Field>;
 
-const Template: ComponentStory<typeof Process> = (args) => <Process {...args} />;
+const Template: ComponentStory<typeof Field> = (args) => (
+  <SpaceBitTheme color='#019393'>
+    <Field {...args} />
+  </SpaceBitTheme>
+);
 
 function factory<T>(fn: () => T, count?: number) {
   return new Array(Math.ceil(count ?? Math.random() * 2)).fill(true).map(fn);
@@ -16,63 +21,5 @@ function factory<T>(fn: () => T, count?: number) {
 
 export const Default = Template.bind({});
 Default.args = {
-  process: {
-    item: {
-      id: 1234,
-      entityType: EntityType.BUSINESS_TASK,
-      label: 'task 1',
-      status: EntityStatus.Work,
-      progress: 86,
-    },
-
-    paths: factory(() => ({
-      item: {
-        id: 2345,
-        entityType: EntityType.EXPLORATION,
-        label: 'exploration 1',
-        status: EntityStatus.Completed,
-        progress: 100,
-      },
-
-      paths: factory(() => ({
-        item: {
-          id: 3234,
-          entityType: EntityType.MODEL,
-          label: 'task 1',
-          status: EntityStatus.Work,
-          progress: 86,
-        },
-
-        paths: factory(() => ({
-          item: {
-            id: 3234,
-            entityType: EntityType.MODEL_VERSION,
-            label: 'task 1',
-            status: EntityStatus.Work,
-            progress: 86,
-          },
-
-          paths: factory(() => ({
-            item: {
-              id: 3234,
-              entityType: EntityType.PROMVERSION,
-              label: 'task 1',
-              status: EntityStatus.Work,
-              progress: 86,
-            },
-
-            paths: factory(() => ({
-              item: {
-                id: 3237,
-                entityType: EntityType.IMPLEMENTATION,
-                label: 'task 4',
-                status: EntityStatus.Work,
-                progress: 92,
-              },
-            })),
-          })),
-        })),
-      })),
-    })),
-  },
+  type: FieldType.DateTime,
 };
