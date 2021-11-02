@@ -7,9 +7,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ExitToAppIcon from '@material-ui/icons/ExitToAppOutlined';
 import AccountCircle from '@material-ui/icons/AccountCircleOutlined';
 
-import { Menu } from '../menu';
-import { roles } from '../../constants';
-import { User, Sitemap } from '../../types';
+import { Menu } from '@/components';
+import { roles } from '@/constants';
+import { User, Sitemap } from '@/types';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

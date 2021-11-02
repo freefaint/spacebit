@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    },
     "outDir": "lib",
-    "module": "commonjs",
+    "module": "ESNext",
     "target": "es2015",
     "strict": true,
     "allowJs": false,
@@ -22,6 +25,7 @@
     "declaration": true
   },
   "exclude": [
-    "src/**/*stories*"
+    "src/**/*stories*",
+    "lib/**/*"
   ]
 }

@@ -1,6 +1,6 @@
 import { useCallback, useState, useEffect } from 'react';
 
-import { useSource } from './useSource';
+import { useSource } from '@/hooks/useSource';
 
 export function useItemsWithChildren<Item extends { id: string }, Child>(
   itemsSource: () => Promise<Item[]>,

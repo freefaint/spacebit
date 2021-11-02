@@ -5,7 +5,7 @@ import { makeStyles, createStyles, withStyles } from '@material-ui/styles';
 
 import ChevronRight from '@material-ui/icons/ChevronRight';
 
-import { User, SiteLocation, PageType, PageSchema, ParentPageSchema, Sitemap } from '../../types';
+import { User, SiteLocation, PageType, PageSchema, ParentPageSchema, Sitemap } from '@/types';
 
 const StyledListItemText = withStyles({
   primary: {

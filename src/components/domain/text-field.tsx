@@ -5,7 +5,7 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOffOutlined';
 import CloseIcon from '@material-ui/icons/Close';
 import SearchIcon from '@material-ui/icons/Search';
 
-import { TextField as CustomMaterialTextField } from '../material';
+import { TextField as CustomMaterialTextField } from '@/components/material';
 
 export const TextField = (props: TextFieldProps & { readOnly?: boolean }) => {
   const [passwordIsHidden, setPasswordIsHidden] = useState(true);
