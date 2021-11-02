@@ -2,9 +2,9 @@ import React from 'react';
 import { PlayCircleFilled } from '@material-ui/icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SpaceBitTheme, Menu } from '../../components';
+import { SpaceBitTheme, Menu } from '@/components';
 
-import { PageRoute, UserRole, PageType } from '../../types';
+import { PageRoute, UserRole, PageType } from '@/types';
 
 export default {
   title: 'Layout/Menu',

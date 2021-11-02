@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SpaceBitTheme } from '../components/theme';
-import { Pagination } from '../components/material';
+import { SpaceBitTheme } from '@/components';
+import { Pagination } from '@/components/material';
 
 export default {
   title: 'Interface/Pagination',

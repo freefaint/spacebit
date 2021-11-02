@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "paths": {
       "@/*": ["./*"]
     },
     "outDir": "lib",
-    "module": "ESNext",
+    "module": "esnext",
     "target": "es2015",
     "strict": true,
     "allowJs": false,

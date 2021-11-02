@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch } from '@material-ui/core';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SpaceBitTheme } from '../../components/theme';
+import { SpaceBitTheme } from '@/components';
 
 export default {
   title: 'Controls/Switch',

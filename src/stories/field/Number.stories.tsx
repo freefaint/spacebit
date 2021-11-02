@@ -2,8 +2,7 @@ import React from 'react';
 import { FormControl } from '@material-ui/core';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Field, FieldType } from '../../components/form/field';
-import { SpaceBitTheme } from '../../components/theme';
+import { Field, FieldType, SpaceBitTheme } from '@/components';
 
 export default {
   title: 'Field/Number',
